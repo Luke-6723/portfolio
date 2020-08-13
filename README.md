@@ -1,1 +1,1 @@
-### Portfolio using react.js and bulma.io
+### Portfolio using EJS and Express
