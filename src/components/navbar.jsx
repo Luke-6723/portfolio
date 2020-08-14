@@ -23,6 +23,7 @@ const NavItem = styled.a`
   &#header {
     user-select: none !important;
     pointer-events: none;
+    font-weight: 600;
   }
 `;
 
