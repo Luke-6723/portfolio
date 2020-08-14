@@ -13,7 +13,7 @@ const NavItem = styled.a`
   color: white;
   height: 56px;
   width: fit-content;
-  padding: 0 12px 0 12px;
+  padding: 0 18px 0 18px;
   line-height: 56px;
   font-size: 18px;
   text-align: center;
