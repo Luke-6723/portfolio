@@ -1,1 +1,1 @@
-### Portfolio using React and Bulma
+### Portfolio using React
