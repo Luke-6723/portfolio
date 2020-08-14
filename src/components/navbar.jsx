@@ -1,69 +1,40 @@
-import React, { Component } from 'react'
+import React from 'react'
+import styled from 'styled-components'
 
-class NavBar extends Component {
-  render () {
-    return (
-      <>
-        <nav class='navbar is-dark' role='navigation' aria-label='main navigation'>
-          <div class='navbar-brand'>
-            <a class='navbar-item' href='/'>
-              <p>Luke Stoodley</p>
-            </a>
+const NavContainer = styled.div`
+  width: 100%;
+  display: flex;
+  height: 56px;
+  background: rgb(40, 40, 40);
+`;
 
-            <a role='button' class='navbar-burger burger' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample'>
-              <span aria-hidden='true' />
-              <span aria-hidden='true' />
-              <span aria-hidden='true' />
-            </a>
-          </div>
-
-          <div id='navbarBasicExample' class='navbar-menu'>
-            <div class='navbar-start'>
-              <a class='navbar-item'>
-                Home
-              </a>
-
-              <a class='navbar-item'>
-                Documentation
-              </a>
-
-              <div class='navbar-item has-dropdown is-hoverable'>
-                <a class='navbar-link'>
-                  More
-                </a>
-
-                <div class='navbar-dropdown'>
-                  <a class='navbar-item'>
-                    About
-                  </a>
-                  <a class='navbar-item'>
-                    Jobs
-                  </a>
-                  <a class='navbar-item'>
-                    Contact
-                  </a>
-                  <hr class='navbar-divider' />
-                  <a class='navbar-item'>
-                      Report an issue
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class='navbar-end'>
-              <div class='navbar-item'>
-                <div class='buttons'>
-                  <a class='button is-light'>
-                      Join my community!
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </>
-    )
+const NavItem = styled.a`
+  text-decoration: none;
+  color: white;
+  height: 56px;
+  width: fit-content;
+  padding: 0 12px 0 12px;
+  line-height: 56px;
+  font-size: 18px;
+  text-align: center;
+  &:hover {
+    background: rgb(30, 30, 30);
   }
+  &#header {
+    user-select: none !important;
+    pointer-events: none;
+  }
+`;
+
+const NavBar = () => {
+  return (
+    <NavContainer>
+      <NavItem id="header">Luke Stoodley</NavItem>
+      <NavItem href="/">Home</NavItem>
+      <NavItem href="/projects">Projects</NavItem>
+      <NavItem href="/contact">Contact</NavItem>
+    </NavContainer>
+  )
 }
 
 export default NavBar
