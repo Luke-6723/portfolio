@@ -1,7 +1,6 @@
 import React from 'react'
 import NavBar from '../components/navbar'
 import '../css/App.css'
-import '../css/bulma.css'
 
 function App () {
   return (
