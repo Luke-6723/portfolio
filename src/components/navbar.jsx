@@ -6,7 +6,7 @@ const NavContainer = styled.div`
   display: flex;
   height: 56px;
   background: rgb(40, 40, 40);
-`;
+`
 
 const NavItem = styled.a`
   text-decoration: none;
@@ -25,15 +25,15 @@ const NavItem = styled.a`
     pointer-events: none;
     font-weight: 600;
   }
-`;
+`
 
 const NavBar = () => {
   return (
     <NavContainer>
-      <NavItem id="header">Luke Stoodley</NavItem>
-      <NavItem href="/">Home</NavItem>
-      <NavItem href="/projects">Projects</NavItem>
-      <NavItem href="/contact">Contact</NavItem>
+      <NavItem id='header'>Luke Stoodley</NavItem>
+      <NavItem href='/'>Home</NavItem>
+      <NavItem href='/projects'>Projects</NavItem>
+      <NavItem href='/contact'>Contact</NavItem>
     </NavContainer>
   )
 }
