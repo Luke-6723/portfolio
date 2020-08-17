@@ -13,11 +13,20 @@ const Container = styled.div`
   color: white;
 `
 
+const SocialContainer = styled.div`
+  display: flex;
+`
+
 const MainBlock = () => {
   return (
     <Container>
       <p> Luke Stoodley </p>
-      <SocialIcon />
+      <SocialContainer>
+        <SocialIcon name='Twitter' iconURL='/images/twitter.png' url='https://twitter.com/CrystalReflex' />
+        <SocialIcon name='Discord' iconURL='/images/discord.png' url='https://discord.gg/UV9pWHD' />
+        <SocialIcon name='GitHub' iconURL='/images/github.png' url='https://github.com/Luke-6723' />
+        <SocialIcon name='Instagram' iconURL='/images/instagram.png' url='https://instagram.com/lukey.stoodley' />
+      </SocialContainer>
     </Container>
   )
 }
