@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.a`
+  user-select: none;
   display: inline-block;
   width: 56px;
   height: 56px;
