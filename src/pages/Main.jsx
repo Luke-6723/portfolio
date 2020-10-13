@@ -11,7 +11,11 @@ const Container = styled.div`
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  .title {
+    margin-bottom: 0;
+  }
   .subheader {
+    margin-top: 0;
     font-size: 16px;
   }
 `
@@ -23,7 +27,7 @@ const SocialContainer = styled.div`
 const MainBlock = () => {
   return (
     <Container>
-      <p> Luke Stoodley </p>
+      <p className='title'> Luke Stoodley </p>
       <p className='subheader'> Programmer and Motorcycle enthusiast </p>
       <SocialContainer>
         <SocialIcon name='Twitter' iconURL='/images/twitter.png' url='https://twitter.com/CrystalReflex' />
