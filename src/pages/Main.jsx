@@ -11,6 +11,9 @@ const Container = styled.div`
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  .subheader {
+    font-size: 16px;
+  }
 `
 
 const SocialContainer = styled.div`
@@ -21,6 +24,7 @@ const MainBlock = () => {
   return (
     <Container>
       <p> Luke Stoodley </p>
+      <p className='subheader'> Programmer and Motorcycle enthusiast </p>
       <SocialContainer>
         <SocialIcon name='Twitter' iconURL='/images/twitter.png' url='https://twitter.com/CrystalReflex' />
         <SocialIcon name='Discord' iconURL='/images/discord.png' url='https://discord.gg/UV9pWHD' />
