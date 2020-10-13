@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import SocialIcon from '../../components/socialIcon'
+import SocialIcon from '../components/socialIcon'
 
 const Container = styled.div`
   background-color: rgb(40, 40, 40);

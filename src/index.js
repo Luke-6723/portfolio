@@ -1,9 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import Home from './pages/Home'
+import Main from './pages/Main'
+import AboutMe from './pages/AboutMe'
+import Projects from './pages/Projects'
 import * as serviceWorker from './util/serviceWorker'
 
-ReactDOM.render(<Home />, document.getElementById('main'))
+ReactDOM.render(<Main />, document.getElementById('main'))
+ReactDOM.render(<AboutMe />, document.getElementById('aboutme'))
+ReactDOM.render(<Projects />, document.getElementById('projects'))
 
 serviceWorker.unregister()
