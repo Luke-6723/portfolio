@@ -17,9 +17,9 @@ RUN npm install
 RUN npm run build
 
 RUN mkdir /data
-RUN cp /tmp/build /data
+RUN cp -r /tmp/build/** /data
 WORKDIR /data
 RUN rm -rf /tmp
 
-RUN serve -s .
+CMD serve -s .
 
