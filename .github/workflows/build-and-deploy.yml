@@ -31,13 +31,12 @@ jobs:
       run: |
         docker login -u $registry_user -p $registry_password registry.lukestoodley.com
         docker push $docker_image_name:latest
-  # prod_deploy:
-  #   needs: prod_push_to_registry
-  #   if: ${{ contains(github.event.head_commit.message, '(stable)') }}
-  #   name: Prod - Deploy update
-  #   runs-on: self-hosted
-  #   steps:
-  #   - uses: actions/checkout@v2
-  #   - name: deploy
-  #     run: |
-  #       ssh luke@192.168.122.222 'cd /home/luke/Shiro-Development/Bot && docker-compose pull app-prod && docker-compose up -d -t 0'
+  deploy:
+    needs: push-to-registry
+    name: Deploy changes
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v2
+    - name: deploy
+      run: |
+        ssh root@192.168.122.1 'cd /root/shiro/portfolio && docker-compose pull && docker-compose up -d -t 0'

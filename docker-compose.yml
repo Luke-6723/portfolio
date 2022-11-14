@@ -1,0 +1,14 @@
+version: '3'
+
+networks:
+  backend:
+    external: true
+
+services:
+  app:
+    hostname: luke-portfolio
+    tty: true
+    image: registry.lukestoodley.com/luke/portfolio:latest
+    restart: always
+    networks:
+      - backend
