@@ -1,0 +1,102 @@
+.landing {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(37, 37, 37, 0.9);
+
+    .introduction {
+      display: flex;
+      align-items: center;
+      margin: auto;
+      flex-direction: column;
+      width: 60%;
+      
+      .heading {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        font-size: 22px;
+
+        .text {
+          margin-top: auto;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 60px;
+          height: 45%;
+        }
+
+        .socials {
+          display: grid;
+          grid-template-columns: min-content min-content min-content min-content min-content min-content min-content min-content;
+          gap: 10px;
+          margin-top: auto;
+
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            border: 1px solid white;
+            padding: 8px;
+            border-radius: 15px;
+            transition: 0.2s;
+
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.4);
+              border-color: rgb(252, 109, 57);
+
+              svg {
+                fill: rgb(253, 144, 105);
+              }
+            }
+            
+            svg {
+              transition: 0.2s;
+              fill: white;
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+
+        .me {
+          width: 18rem;
+          height: 18rem;
+          margin: 0 15px 15px 0;
+
+          border-radius: 3rem;
+        }
+      }
+
+      .buttons {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 18rem 18rem 18rem 18rem;
+        gap: 15px;
+
+        a {
+          color: white;
+          text-decoration: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 80px;
+          border-radius: 15px;
+          background-color: rgba(0, 0, 0, 0.75);
+          border: 1px solid rgba(252, 75, 11, 0.584);
+        }
+      }
+    }
+  }
+}
