@@ -13,6 +13,7 @@ COPY ["package.json", "/tmp"]
 
 RUN npm install npm@latest -g
 RUN npm install serve -g
+RUN npm install
 RUN npm run build
 
 COPY /tmp/build /data
