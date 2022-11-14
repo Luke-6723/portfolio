@@ -7,8 +7,8 @@ RUN apk update && apk add gnupg wget
 
 WORKDIR /tmp
 
-ADD ./src /tmp
-ADD ./public /tmp
+ADD ./src /tmp/src
+ADD ./public /tmp/public
 COPY ["package.json", "/tmp"]
 
 RUN npm install npm@latest -g
