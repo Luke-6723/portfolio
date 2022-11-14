@@ -9,7 +9,7 @@ WORKDIR /tmp
 
 ADD ./src /tmp/src
 ADD ./public /tmp/public
-COPY ["package.json", "/tmp"]
+COPY ["tsconfig.json", "package.json", "/tmp/"]
 
 RUN npm install npm@latest -g
 RUN npm install serve -g
