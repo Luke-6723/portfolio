@@ -8,11 +8,10 @@ ADD ./public /tmp/public
 COPY ["tsconfig.json", "package.json", "/tmp/"]
 RUN npm install serve npm@latest -g
 RUN npm install && npm run build
+RUN mkdir sws
 
-FROM halverneus/static-file-server
+FROM joseluisq/static-web-server:latest
 
-COPY --from=base /tmp/build /web
+COPY --chown=0:0 --from=base /tmp/build/ /sws
 
-ENV PORT=8888
-ENV FOLDER=/web
-CMD serve
+CMD [ "-d /sws/web/" ] 
