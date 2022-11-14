@@ -8,10 +8,13 @@ ADD ./public /tmp/public
 COPY ["tsconfig.json", "package.json", "/tmp/"]
 RUN npm install serve npm@latest -g
 RUN npm install && npm run build
-RUN mkdir sws
 
-FROM joseluisq/static-web-server:latest
+FROM busybox:latest
 
-COPY --chown=0:0 --from=base /tmp/build/ /sws
+RUN adduser -D static
+USER static
+WORKDIR /home/static
 
-CMD [ "-d /sws/web/" ] 
+COPY --chown=1000:1000 --from=base /tmp/build/ .
+
+CMD ["busybox", "httpd", "-f", "-v", "-p", "3000"]
