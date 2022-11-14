@@ -16,10 +16,10 @@ RUN npm install serve -g
 RUN npm install
 RUN npm run build
 
+RUN mkdir /data
 COPY /tmp/build /data
-RUN rm -rf /tmp
-
 WORKDIR /data
+RUN rm -rf /tmp
 
 RUN serve -s .
 
