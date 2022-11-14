@@ -13,4 +13,6 @@ FROM halverneus/static-file-server
 
 COPY --from=base /tmp/build /web
 
+ENV PORT=8888
+ENV FOLDER=/web
 CMD serve
