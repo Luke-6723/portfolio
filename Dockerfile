@@ -16,7 +16,7 @@ RUN npm install serve -g
 RUN npm install
 RUN npm run build
 
-COPY /tmp/build /data
+RUN cp /tmp/build /data
 RUN rm -rf /tmp
 
 WORKDIR /data
