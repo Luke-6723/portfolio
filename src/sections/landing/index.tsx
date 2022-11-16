@@ -4,6 +4,14 @@ import backgroundImage from '../../images/bike.jpg'
 import me from '../../images/me.png'
 import { Discord, Github, Linkedin, Mail, TikTok, Twitter, Waving } from '../../icons'
 
+function anchorClick(e: any) {
+  e.preventDefault()
+
+  document.querySelector(e.target.getAttribute('href')).scrollIntoView({
+    behavior: 'smooth'
+  })
+}
+
 function Landing() {
   return (
     <div style={{
@@ -31,9 +39,9 @@ function Landing() {
             </div>
           </div>
           <div className='buttons'>
-            <a href='#'>About me</a>
-            <a href='#'>My experience</a>
-            <a href='#'>My projects</a>
+            <a onClick={anchorClick} href='#aboutme'>About me</a>
+            <a onClick={anchorClick} href='#'>My experience</a>
+            <a onClick={anchorClick} href='#'>My projects</a>
           </div>
         </div>
       </div>
