@@ -40,8 +40,8 @@ function Landing() {
           </div>
           <div className='buttons'>
             <a onClick={anchorClick} href='#aboutme'>About me</a>
-            <a onClick={anchorClick} href='#'>My experience</a>
-            <a onClick={anchorClick} href='#'>My projects</a>
+            <a onClick={anchorClick} href='#experience'>My experience</a>
+            <a onClick={anchorClick} href='#projects'>My projects</a>
           </div>
         </div>
       </div>
