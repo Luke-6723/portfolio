@@ -3,14 +3,17 @@ import './experience.scss'
 
 function Skill(props: { name: string, level: number }) {
   const inactiveBars = 5 - props.level
+  const bars = []
+  for(let i = 0; i < props.level; i++) {
+    bars.push(<span className='bar active'></span>)
+  }
+  for(let i = 0; i < inactiveBars; i++) {
+    bars.push(<span className='bar'></span>)
+  }
   return (<div className='skill'>
     <div className='name'>{props.name}</div>
     <div className='scale'>
-      <span className='bar'></span>
-      <span className='bar'></span>
-      <span className='bar'></span>
-      <span className='bar'></span>
-      <span className='bar'></span>
+      {bars}
     </div>
   </div>)
 }
@@ -24,20 +27,25 @@ function Experience() {
         <div className='skills'>
           <div className='skill headings'>
             <div className='name'>
-              <div>Skill</div>
+              <div>Expertise</div>
             </div>
             <div className='scale'>
               <span>Novice</span>
-              <span>Advanced</span>
+              <span>Adv. Beginner</span>
               <span>Competent</span>
               <span>Proficient</span>
               <span>Expert</span>
             </div>
           </div>
-          <Skill name='Javascript' level={4} />
-          <Skill name='Mongo' level={4} />
-          <Skill name='Postgres' level={4} />
-          <Skill name='Linux' level={4} />
+          <Skill name='Javascript (ES5)' level={2} />
+          <Skill name='Javascript (ES6)' level={4} />
+          <Skill name='GoLang' level={2} />
+          <Skill name='Mongo' level={3} />
+          <Skill name='Postgres' level={3} />
+          <Skill name='Windows' level={4} />
+          <Skill name='MacOS' level={3} />
+          <Skill name='Ubuntu' level={4} />
+          <Skill name='Centos' level={2} />
         </div>
       </div>
     </div>
