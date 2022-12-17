@@ -23,11 +23,11 @@ function Landing() {
       <div className="content">
         <div className='introduction'>
           <div className='heading'>
-            <img className='me' src={me} />
+            <img alt="me and my daughter" className='me' src={me} />
             <div className='text'>
               <div><Waving id='waving' /> Hi, I'm Luke</div>
               <div>I'm a Software Engineer based the United Kingdom</div>
-
+              <div>I currently work at <a href='https://orcascan.com'>OrcaScan</a></div>
               <div className='socials'>
                 <a title="Discord" href='https://discord.com/users/116930717241311236'><Discord /></a>
                 <a title="Github" href='https://github.com/Luke-6723'><Github /></a>

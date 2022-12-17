@@ -44,6 +44,11 @@
           margin-bottom: 60px;
           height: 45%;
 
+          a {
+            text-decoration: none;
+            color: rgb(142, 190, 253);
+          }
+
           svg#waving {
             margin-right: 4px;
             fill: white;
@@ -58,10 +63,10 @@
           @media screen and (max-width: 800px) {
             display: flex;
             justify-items: center;
-            margin-top: 25px;
+            margin-top: 15px;
           }
+          margin-top: 15px;
           gap: 10px;
-          margin-top: auto;
 
           a {
             display: flex;
