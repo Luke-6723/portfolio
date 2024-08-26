@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import SpotifySidebar from "@/components/ui/spotifySidebar";
-import { FaCss3, FaGolang, FaHtml5 } from "react-icons/fa6";
+import { FaBusinessTime, FaCss3, FaGolang, FaHtml5 } from "react-icons/fa6";
 
 export default function Home() {
 
@@ -90,8 +90,50 @@ export default function Home() {
           </div>
         </div>
         <span className="mb-4 pb-2 border-b-2 border-b-white/25">What I&apos;ve worked on:</span>
-        <div>
-          Work in progress...
+        <div className="flex flex-col w-full">
+          <div className="flex flex-row gap-4">
+            <div>
+              <FaBusinessTime size={48} />
+            </div>
+            <div className="flex flex-col w-full">
+              <div>Orca Scan</div>
+              <div>Dec 2022 - Jan 2024</div>
+              <div className="border-white my-2 border-b-2"></div>
+              <ul className="list-disc">
+                <li>
+                  Skilfully detected and fixed minor bugs on software, completing within deadline dependent
+                  situations
+                </li>
+                <li>
+                  Conducted thorough quality assessments to determine if products met the companys high quality standards.
+                </li>
+                <li>
+                  Wrote front-end and backend unit tests to ensure that functionality worked as expected before being shipped to the end user.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex flex-row gap-4 mt-4">
+            <div>
+              <FaBusinessTime size={48} />
+            </div>
+            <div className="flex flex-col w-full">
+              <div>Cloud Heroes</div>
+              <div>Dec 2022 - Dec 2022</div>
+              <div className="border-white my-2 border-b-2"></div>
+              <ul className="list-disc">
+                <li>
+                  Wrote and developed new and well-tested code for different software projects internal and external.
+                </li>
+                <li>
+                  Built and maintained code libraries used to produce consistent and reliable code as well and rewriting and refactoring existing code for efficiency.
+                </li>
+                <li>
+                  Wrote clean and dynamic code, leveraging expertise across multiple programming languages to meet diverse requirements.
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </main>
