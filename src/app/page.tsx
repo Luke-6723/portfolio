@@ -119,7 +119,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col w-full">
               <div>Cloud Heroes</div>
-              <div>Dec 2022 - Dec 2022</div>
+              <div>Apr 2021 - Dec 2022</div>
               <div className="border-white my-2 border-b-2"></div>
               <ul className="list-disc">
                 <li>
